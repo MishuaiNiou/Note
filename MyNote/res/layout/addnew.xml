@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >   
+    
+    <include 
+        android:id="@+id/head_layout"
+        layout="@layout/head"/>
+    
+    <LinearLayout 
+        android:id="@+id/bottom_layout"
+	    android:layout_width="match_parent"
+	    android:layout_height="40dp"
+	    android:orientation="horizontal"
+	    android:layout_alignParentBottom="true"
+	    android:background="#F0F0F0F0">
+	    
+	    <ImageView
+	        android:id="@+id/photo"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:layout_gravity="center_vertical"
+	        android:src="@drawable/photo"/>
+	    
+	    <ImageView 
+	        android:id="@+id/camera"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:layout_gravity="center_vertical"
+	        android:src="@drawable/camera"/>
+	    
+	    <ImageView 
+	        android:id="@+id/save"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:layout_gravity="center_vertical"
+	        android:src="@drawable/save"/>
+	    
+	    <ImageView 
+	        android:id="@+id/delete"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:layout_gravity="center_vertical"
+	        android:src="@drawable/delete"/>
+	</LinearLayout>
+	
+    <ScrollView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:layout_below="@id/head_layout"
+	    android:layout_above="@id/bottom_layout"
+        >
+	    <LinearLayout 
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical"
+	        >
+	        <EditText 
+	            android:id="@+id/contentText"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:padding="20dp"
+		        android:gravity="top"
+		        android:background="@null"
+		        android:hint="新建便签"/>
+	        <ImageView 
+	            android:id="@+id/contentImage"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:padding="20dp"
+	            android:visibility="gone"/>
+        </LinearLayout>
+    </ScrollView>
+	
+    
+    
+</RelativeLayout>

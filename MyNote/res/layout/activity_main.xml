@@ -1,0 +1,50 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" >
+
+
+  <include
+      android:id="@+id/header_layout"
+      layout="@layout/head"/>
+  
+   <RelativeLayout
+        android:id="@+id/add_layout" 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentBottom="true"
+	    android:background="#F0F0F0F0">
+    
+	    <ImageView 
+	        android:id="@+id/add"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:src="@drawable/add"
+	        android:layout_centerHorizontal="true"
+	        android:layout_marginTop="5dp"
+	        android:layout_marginBottom="5dp"/>
+	    
+	    <TextView 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@id/add"
+	        android:layout_centerHorizontal="true"
+	        android:layout_marginBottom="10dp"
+	        android:text="新建便签"
+	        android:textSize="13dp"
+	        android:textColor="#80808080"/>
+
+   </RelativeLayout>
+   
+    
+   <ListView 
+       android:id="@+id/listView"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_below="@id/header_layout"
+       android:layout_above="@id/add_layout">
+       
+   </ListView>
+    
+</RelativeLayout>
